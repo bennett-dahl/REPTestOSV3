@@ -77,8 +77,6 @@ struct OSStatus
   unsigned long safetyFreqTimer = 0;
   int safetyFreq = 0;
   bool alarmStatus = false;
-  const char *ssid = "CBCI-CE6A-2.4_2GEXT";
-  const char *password = "flower2351earth";
 
   int keyOffPin;
   int keyOnPin;
