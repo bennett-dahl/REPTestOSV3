@@ -1,0 +1,209 @@
+{
+  "lastEdited": {
+    "seconds": 1622045228,
+    "nanos": 0
+  },
+  "codeOptions": {
+    "applicationUUID": "e2546280-7452-4879-8faa-2c4fe5c2809f",
+    "applicationName": "REP Test OS V2",
+    "lastInputUuid": "6dd87e7d-e751-4912-a70d-91793b1d3d87",
+    "lastDisplayUuid": "d4c84106-fa87-4024-b91e-053e17a52b8f",
+    "lastRemoteUuid": "2c101fec-1f7d-4ff3-8d2b-992ad41e7fcb",
+    "embeddedPlatform": "ARDUINO_ESP32",
+    "namingRecursive": true,
+    "saveToSrc": false,
+    "useCppMain": true,
+    "lastProperties": [
+      {
+        "name": "PULLUP_LOGIC",
+        "latestValue": "true",
+        "subsystem": "INPUT"
+      },
+      {
+        "name": "INTERRUPT_SWITCHES",
+        "latestValue": "false",
+        "subsystem": "INPUT"
+      },
+      {
+        "name": "SWITCH_IODEVICE",
+        "latestValue": "",
+        "subsystem": "INPUT"
+      },
+      {
+        "name": "ENCODER_PIN_A",
+        "latestValue": "16",
+        "subsystem": "INPUT"
+      },
+      {
+        "name": "ENCODER_PIN_B",
+        "latestValue": "17",
+        "subsystem": "INPUT"
+      },
+      {
+        "name": "ENCODER_PIN_OK",
+        "latestValue": "18",
+        "subsystem": "INPUT"
+      },
+      {
+        "name": "LCD_WIDTH",
+        "latestValue": "16",
+        "subsystem": "DISPLAY"
+      },
+      {
+        "name": "LCD_HEIGHT",
+        "latestValue": "4",
+        "subsystem": "DISPLAY"
+      },
+      {
+        "name": "I2C_ADDRESS",
+        "latestValue": "0x27",
+        "subsystem": "DISPLAY"
+      },
+      {
+        "name": "PIN_LAYOUT",
+        "latestValue": "RS_RW_EN",
+        "subsystem": "DISPLAY"
+      },
+      {
+        "name": "WIRE_VARIABLE",
+        "latestValue": "Wire",
+        "subsystem": "DISPLAY"
+      }
+    ]
+  },
+  "projectName": "Version 2 of REP Test OS based off of ESP32",
+  "namingRecursive": true,
+  "version": "1.00",
+  "items": [
+    {
+      "parentId": 0,
+      "type": "analogItem",
+      "item": {
+        "name": "Total Cycles",
+        "eepromAddress": 33,
+        "id": 20,
+        "readOnly": true,
+        "localOnly": false,
+        "visible": true,
+        "maxValue": 32767,
+        "offset": 0,
+        "divisor": 0,
+        "unitName": null
+      }
+    },
+    {
+      "parentId": 0,
+      "type": "textItem",
+      "item": {
+        "name": "Time Rem",
+        "eepromAddress": 21,
+        "id": 8,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true,
+        "itemType": "TIME_24H",
+        "textLength": 1
+      }
+    },
+    {
+      "parentId": 0,
+      "type": "subMenu",
+      "item": {
+        "name": "Test Settings",
+        "eepromAddress": -1,
+        "id": 2,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true,
+        "secured": false
+      }
+    },
+    {
+      "parentId": 2,
+      "type": "boolItem",
+      "item": {
+        "name": "Push",
+        "eepromAddress": 4,
+        "id": 3,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true,
+        "functionName": "pushControl",
+        "naming": "TRUE_FALSE"
+      }
+    },
+    {
+      "parentId": 2,
+      "type": "boolItem",
+      "item": {
+        "name": "Pull",
+        "eepromAddress": 5,
+        "id": 4,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true,
+        "functionName": "pullControl",
+        "naming": "TRUE_FALSE"
+      }
+    },
+    {
+      "parentId": 2,
+      "type": "analogItem",
+      "item": {
+        "name": "Cycles Per Second",
+        "eepromAddress": 6,
+        "id": 6,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true,
+        "functionName": "cycleFrequency",
+        "maxValue": 10,
+        "offset": 0,
+        "divisor": 1,
+        "unitName": ""
+      }
+    },
+    {
+      "parentId": 2,
+      "type": "largeNumItem",
+      "item": {
+        "name": "Max Cycles",
+        "eepromAddress": 25,
+        "id": 11,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true,
+        "functionName": "maxCycles",
+        "decimalPlaces": 0,
+        "digitsAllowed": 6,
+        "negativeAllowed": false
+      }
+    },
+    {
+      "parentId": 0,
+      "type": "actionMenu",
+      "item": {
+        "name": "Reset Test",
+        "eepromAddress": -1,
+        "id": 18,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true,
+        "functionName": "resetTest"
+      }
+    },
+    {
+      "parentId": 0,
+      "type": "actionMenu",
+      "item": {
+        "name": "Reset Total Cycles",
+        "eepromAddress": -1,
+        "id": 19,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true,
+        "functionName": "resetTotalCycles"
+      }
+    }
+  ]
+}
